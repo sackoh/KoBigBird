@@ -25,9 +25,7 @@ def sample_writer(data, config, tokenizer, is_train):
 
 def make_label_map(labels):
     unique_labels = sorted(list(set(labels)))
-    label2id = dict()
-    for i, label in enumerate(unique_labels):
-        label2id[label] = i
+    label2id_new = {label: i for i, label in enumerate(unique_labels)}
     return label2id
 
 
